@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A5C5322B1D40BC7100EF7127"
-               BuildableName = "CAMetadata"
-               BlueprintName = "CAMetadata"
+               BlueprintIdentifier = "A5C5323B1D40E35C00EF7127"
+               BuildableName = "CAToneFileGenerator"
+               BlueprintName = "CAToneFileGenerator"
                ReferencedContainer = "container:CAMetadata.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A5C5322B1D40BC7100EF7127"
-            BuildableName = "CAMetadata"
-            BlueprintName = "CAMetadata"
+            BlueprintIdentifier = "A5C5323B1D40E35C00EF7127"
+            BuildableName = "CAToneFileGenerator"
+            BlueprintName = "CAToneFileGenerator"
             ReferencedContainer = "container:CAMetadata.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -55,15 +55,15 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A5C5322B1D40BC7100EF7127"
-            BuildableName = "CAMetadata"
-            BlueprintName = "CAMetadata"
+            BlueprintIdentifier = "A5C5323B1D40E35C00EF7127"
+            BuildableName = "CAToneFileGenerator"
+            BlueprintName = "CAToneFileGenerator"
             ReferencedContainer = "container:CAMetadata.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "/Users/brownfeng/test.mp3"
+            argument = "440"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
@@ -80,9 +80,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "A5C5322B1D40BC7100EF7127"
-            BuildableName = "CAMetadata"
-            BlueprintName = "CAMetadata"
+            BlueprintIdentifier = "A5C5323B1D40E35C00EF7127"
+            BuildableName = "CAToneFileGenerator"
+            BlueprintName = "CAToneFileGenerator"
             ReferencedContainer = "container:CAMetadata.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

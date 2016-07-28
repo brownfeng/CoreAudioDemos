@@ -7,11 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5C532301D40BC7100EF7127 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C5322F1D40BC7100EF7127 /* main.m */; };
+		A54B23871D434E1E00309824 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = A54B23861D434E1E00309824 /* Player.m */; };
+		A58F9F771D421CD000E5EFFD /* CAStreamFormatTester.m in Sources */ = {isa = PBXBuildFile; fileRef = A58F9F761D421CD000E5EFFD /* CAStreamFormatTester.m */; };
+		A58F9F821D42415D00E5EFFD /* Recorder.m in Sources */ = {isa = PBXBuildFile; fileRef = A58F9F811D42415D00E5EFFD /* Recorder.m */; };
+		A5C532301D40BC7100EF7127 /* CAMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C5322F1D40BC7100EF7127 /* CAMetadata.m */; };
+		A5C532371D40BDFA00EF7127 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C532361D40BDFA00EF7127 /* AudioToolbox.framework */; };
+		A5C5323F1D40E35C00EF7127 /* CAToneFileGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C5323E1D40E35C00EF7127 /* CAToneFileGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		A54B23821D434E1E00309824 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		A58F9F721D421CD000E5EFFD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		A58F9F7D1D42415D00E5EFFD /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		A5C5322A1D40BC7100EF7127 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		A5C5323A1D40E35C00EF7127 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +64,50 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A54B23841D434E1E00309824 /* Player */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Player; sourceTree = BUILT_PRODUCTS_DIR; };
+		A54B23861D434E1E00309824 /* Player.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		A58F9F741D421CD000E5EFFD /* CAStreamFormatTester */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CAStreamFormatTester; sourceTree = BUILT_PRODUCTS_DIR; };
+		A58F9F761D421CD000E5EFFD /* CAStreamFormatTester.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAStreamFormatTester.m; sourceTree = "<group>"; };
+		A58F9F7F1D42415D00E5EFFD /* Recorder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Recorder; sourceTree = BUILT_PRODUCTS_DIR; };
+		A58F9F811D42415D00E5EFFD /* Recorder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Recorder.m; sourceTree = "<group>"; };
 		A5C5322C1D40BC7100EF7127 /* CAMetadata */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CAMetadata; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5C5322F1D40BC7100EF7127 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5C5322F1D40BC7100EF7127 /* CAMetadata.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAMetadata.m; sourceTree = "<group>"; };
+		A5C532361D40BDFA00EF7127 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A5C5323C1D40E35C00EF7127 /* CAToneFileGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CAToneFileGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5C5323E1D40E35C00EF7127 /* CAToneFileGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAToneFileGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A54B23811D434E1E00309824 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A58F9F711D421CD000E5EFFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A58F9F7C1D42415D00E5EFFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5C532291D40BC7100EF7127 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C532371D40BDFA00EF7127 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5C532391D40E35C00EF7127 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,10 +117,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A54B23851D434E1E00309824 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				A54B23861D434E1E00309824 /* Player.m */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		A58F9F751D421CD000E5EFFD /* CAStreamFormatTester */ = {
+			isa = PBXGroup;
+			children = (
+				A58F9F761D421CD000E5EFFD /* CAStreamFormatTester.m */,
+			);
+			path = CAStreamFormatTester;
+			sourceTree = "<group>";
+		};
+		A58F9F801D42415D00E5EFFD /* Recorder */ = {
+			isa = PBXGroup;
+			children = (
+				A58F9F811D42415D00E5EFFD /* Recorder.m */,
+			);
+			path = Recorder;
+			sourceTree = "<group>";
+		};
 		A5C532231D40BC7100EF7127 = {
 			isa = PBXGroup;
 			children = (
+				A5C532361D40BDFA00EF7127 /* AudioToolbox.framework */,
 				A5C5322E1D40BC7100EF7127 /* CAMetadata */,
+				A5C5323D1D40E35C00EF7127 /* CAToneFileGenerator */,
+				A58F9F751D421CD000E5EFFD /* CAStreamFormatTester */,
+				A58F9F801D42415D00E5EFFD /* Recorder */,
+				A54B23851D434E1E00309824 /* Player */,
 				A5C5322D1D40BC7100EF7127 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +158,10 @@
 			isa = PBXGroup;
 			children = (
 				A5C5322C1D40BC7100EF7127 /* CAMetadata */,
+				A5C5323C1D40E35C00EF7127 /* CAToneFileGenerator */,
+				A58F9F741D421CD000E5EFFD /* CAStreamFormatTester */,
+				A58F9F7F1D42415D00E5EFFD /* Recorder */,
+				A54B23841D434E1E00309824 /* Player */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,14 +169,73 @@
 		A5C5322E1D40BC7100EF7127 /* CAMetadata */ = {
 			isa = PBXGroup;
 			children = (
-				A5C5322F1D40BC7100EF7127 /* main.m */,
+				A5C5322F1D40BC7100EF7127 /* CAMetadata.m */,
 			);
 			path = CAMetadata;
+			sourceTree = "<group>";
+		};
+		A5C5323D1D40E35C00EF7127 /* CAToneFileGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				A5C5323E1D40E35C00EF7127 /* CAToneFileGenerator.m */,
+			);
+			path = CAToneFileGenerator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A54B23831D434E1E00309824 /* Player */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A54B23881D434E1E00309824 /* Build configuration list for PBXNativeTarget "Player" */;
+			buildPhases = (
+				A54B23801D434E1E00309824 /* Sources */,
+				A54B23811D434E1E00309824 /* Frameworks */,
+				A54B23821D434E1E00309824 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Player;
+			productName = Player;
+			productReference = A54B23841D434E1E00309824 /* Player */;
+			productType = "com.apple.product-type.tool";
+		};
+		A58F9F731D421CD000E5EFFD /* CAStreamFormatTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A58F9F7A1D421CD000E5EFFD /* Build configuration list for PBXNativeTarget "CAStreamFormatTester" */;
+			buildPhases = (
+				A58F9F701D421CD000E5EFFD /* Sources */,
+				A58F9F711D421CD000E5EFFD /* Frameworks */,
+				A58F9F721D421CD000E5EFFD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CAStreamFormatTester;
+			productName = CAStreamFormatTester;
+			productReference = A58F9F741D421CD000E5EFFD /* CAStreamFormatTester */;
+			productType = "com.apple.product-type.tool";
+		};
+		A58F9F7E1D42415D00E5EFFD /* Recorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A58F9F831D42415D00E5EFFD /* Build configuration list for PBXNativeTarget "Recorder" */;
+			buildPhases = (
+				A58F9F7B1D42415D00E5EFFD /* Sources */,
+				A58F9F7C1D42415D00E5EFFD /* Frameworks */,
+				A58F9F7D1D42415D00E5EFFD /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Recorder;
+			productName = Recorder;
+			productReference = A58F9F7F1D42415D00E5EFFD /* Recorder */;
+			productType = "com.apple.product-type.tool";
+		};
 		A5C5322B1D40BC7100EF7127 /* CAMetadata */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5C532331D40BC7100EF7127 /* Build configuration list for PBXNativeTarget "CAMetadata" */;
@@ -82,6 +253,23 @@
 			productReference = A5C5322C1D40BC7100EF7127 /* CAMetadata */;
 			productType = "com.apple.product-type.tool";
 		};
+		A5C5323B1D40E35C00EF7127 /* CAToneFileGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5C532401D40E35C00EF7127 /* Build configuration list for PBXNativeTarget "CAToneFileGenerator" */;
+			buildPhases = (
+				A5C532381D40E35C00EF7127 /* Sources */,
+				A5C532391D40E35C00EF7127 /* Frameworks */,
+				A5C5323A1D40E35C00EF7127 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CAToneFileGenerator;
+			productName = CAToneFileGenerator;
+			productReference = A5C5323C1D40E35C00EF7127 /* CAToneFileGenerator */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -91,7 +279,19 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = brownfeng;
 				TargetAttributes = {
+					A54B23831D434E1E00309824 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					A58F9F731D421CD000E5EFFD = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					A58F9F7E1D42415D00E5EFFD = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					A5C5322B1D40BC7100EF7127 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					A5C5323B1D40E35C00EF7127 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
@@ -109,22 +309,100 @@
 			projectRoot = "";
 			targets = (
 				A5C5322B1D40BC7100EF7127 /* CAMetadata */,
+				A5C5323B1D40E35C00EF7127 /* CAToneFileGenerator */,
+				A58F9F731D421CD000E5EFFD /* CAStreamFormatTester */,
+				A58F9F7E1D42415D00E5EFFD /* Recorder */,
+				A54B23831D434E1E00309824 /* Player */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A54B23801D434E1E00309824 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A54B23871D434E1E00309824 /* Player.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A58F9F701D421CD000E5EFFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A58F9F771D421CD000E5EFFD /* CAStreamFormatTester.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A58F9F7B1D42415D00E5EFFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A58F9F821D42415D00E5EFFD /* Recorder.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5C532281D40BC7100EF7127 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5C532301D40BC7100EF7127 /* main.m in Sources */,
+				A5C532301D40BC7100EF7127 /* CAMetadata.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5C532381D40E35C00EF7127 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5C5323F1D40E35C00EF7127 /* CAToneFileGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		A54B23891D434E1E00309824 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A54B238A1D434E1E00309824 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A58F9F781D421CD000E5EFFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A58F9F791D421CD000E5EFFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A58F9F841D42415D00E5EFFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A58F9F851D42415D00E5EFFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		A5C532311D40BC7100EF7127 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -220,9 +498,50 @@
 			};
 			name = Release;
 		};
+		A5C532411D40E35C00EF7127 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A5C532421D40E35C00EF7127 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A54B23881D434E1E00309824 /* Build configuration list for PBXNativeTarget "Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A54B23891D434E1E00309824 /* Debug */,
+				A54B238A1D434E1E00309824 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A58F9F7A1D421CD000E5EFFD /* Build configuration list for PBXNativeTarget "CAStreamFormatTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A58F9F781D421CD000E5EFFD /* Debug */,
+				A58F9F791D421CD000E5EFFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A58F9F831D42415D00E5EFFD /* Build configuration list for PBXNativeTarget "Recorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A58F9F841D42415D00E5EFFD /* Debug */,
+				A58F9F851D42415D00E5EFFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A5C532271D40BC7100EF7127 /* Build configuration list for PBXProject "CAMetadata" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -239,6 +558,16 @@
 				A5C532351D40BC7100EF7127 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5C532401D40E35C00EF7127 /* Build configuration list for PBXNativeTarget "CAToneFileGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5C532411D40E35C00EF7127 /* Debug */,
+				A5C532421D40E35C00EF7127 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

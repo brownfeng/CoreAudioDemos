@@ -6,13 +6,73 @@
 	<dict>
 		<key>CAMetadata.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>CAStreamFormatTester.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>CAToneFileGenerator.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Player.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>Recorder.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>A54B23781D434DF200309824</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A54B23831D434E1E00309824</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A58F9F731D421CD000E5EFFD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A58F9F7E1D42415D00E5EFFD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A5C5322B1D40BC7100EF7127</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A5C5323B1D40E35C00EF7127</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A5C532461D40E7E100EF7127</key>
 		<dict>
 			<key>primary</key>
 			<true/>
