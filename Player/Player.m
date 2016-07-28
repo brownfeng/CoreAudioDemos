@@ -1,7 +1,6 @@
 //
 //  main.m
 //  Player
-//
 
 //With the exception of the callback function’s signature, this is identical to the previous chapter’s example.The other big difference is that the comment “open audio file” appears before you set up the audio format and queue.That’s because, instead of choos- ing a format to record to, you need to discover the format of the file you want to play and set up your queue accordingly.
 
