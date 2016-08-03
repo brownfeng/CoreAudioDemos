@@ -23,7 +23,7 @@
 
 使用`AudioQueueService`进行录音.录音以后的数据直接通过`AudioFileWritePackets`写入文件系统.其实在回调函数中,对于录音的PCM数据可以进行其他的音频格式或者压缩算法的封装.在demo中还展示了如何进行AudioQueueBuffer的大小的合理计算方法.
 
-### Player(不完整)
+### Player
 
 与前一个Recorder的Demo相反,使用`AudioQueueService`直接播放raw LPCM音频数据.具体的Demo可以看前面提到的书中的内容,里面的代码是完整的.
 
