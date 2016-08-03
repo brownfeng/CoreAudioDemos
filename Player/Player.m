@@ -11,13 +11,7 @@
 #import <Foundation/Foundation.h>
 #include <AudioToolbox/AudioToolbox.h>
 
-#define kPlaybackFileLocation CFSTR("/Users/username/Music/iTunes/iTunes Music/Artist Name/Album Name/Song Name.m4a")
-/**
- To hearken back to your work on the recording audio queue, you can use the output.caf you recorded in Chapter 4, “Recording,” which will be in a long “DerivedData” path something like this:
- 
- #define kPlaybackFileLocation CFSTR("/Users/username /Library/Developer/ Xcode/DerivedData/CH04_Recorderdvninfofohfiwcgyndnhzarhsipp/ Build/Products/Debug/output.caf")
- */
-
+#define kPlaybackFileLocation CFSTR("./output.caf")
 #define kNumberPlaybackBuffers 3
 
 
@@ -51,35 +45,60 @@ typedef struct MyPlayer {
     Boolean isDone;
 } MyPlayer;
 
-
-#pragma mark utility functions
-// Insert Listing 4.2 here
-// Insert Listing 5.14 here
-// Insert Listing 5.15 here
-
-#pragma mark playback callback function
-// Replace with Listings 5.16-5.19
-static void MyAQOutputCallback(void *inUserData,AudioQueueRef inAQ,AudioQueueBufferRef inCompleteAQBuffer){
-    
+static void MyCopyEncoderCookieToQueue(AudioFileID theFile,AudioQueueRef queue ) {
+    UInt32 propertySize;
+    OSStatus result = AudioFileGetPropertyInfo (theFile,kAudioFilePropertyMagicCookieData, &propertySize,NULL);
+    if (result == noErr && propertySize > 0) {
+        Byte* magicCookie = (UInt8*)malloc(sizeof(UInt8) * propertySize);
+        CheckError(AudioFileGetProperty (theFile,kAudioFilePropertyMagicCookieData,&propertySize, magicCookie),"Get cookie from file failed");
+        CheckError(AudioQueueSetProperty(queue,kAudioQueueProperty_MagicCookie, magicCookie,propertySize),"Set cookie on queue failed");
+        free(magicCookie);
+    }
 }
 
+void CalculateBytesForTime (AudioFileID inAudioFile, AudioStreamBasicDescription inDesc,Float64 inSeconds, UInt32 *outBufferSize, UInt32 *outNumPackets){
+    UInt32 maxPacketSize;
+    UInt32 propSize = sizeof(maxPacketSize);
+    CheckError(AudioFileGetProperty(inAudioFile,kAudioFilePropertyPacketSizeUpperBound,&propSize,&maxPacketSize),"Couldn't get file's max packet size");
+    
+    static const int maxBufferSize = 0x10000; static const int minBufferSize = 0x4000;
+    if (inDesc.mFramesPerPacket) {
+        Float64 numPacketsForTime = inDesc.mSampleRate /inDesc.mFramesPerPacket * inSeconds;
+        *outBufferSize = numPacketsForTime * maxPacketSize;
+    }else{
+        *outBufferSize = maxBufferSize > maxPacketSize ?maxBufferSize : maxPacketSize;
+    }
+    
+    
+    if (*outBufferSize > maxBufferSize && *outBufferSize > maxPacketSize){
+        *outBufferSize = maxBufferSize;
+    }
+    else {
+        if (*outBufferSize < minBufferSize){
+            *outBufferSize = minBufferSize;
+        }
+    }
+    *outNumPackets = *outBufferSize / maxPacketSize;
+}
+#pragma mark playback callback function
+// Replace with Listings 5.16-5.19
+static void MyAQOutputCallback(void *inUserData, AudioQueueRef inAQ,AudioQueueBufferRef inCompleteAQBuffer)
+{
+    MyPlayer *aqp = (MyPlayer*)inUserData; if (aqp->isDone) return;
 
-/**
- //Open an audio file
- //Insert Listings 5.3-5.4 here
- 
- //Set up format
- //Insert Listing 5.5 here
- 
- //Set up queue
- // Insert Listings 5.6-5.10 here
- 
- // Start queue
- // Insert Listing 5.11-5.12 here
- 
- // Clean up queue when finished
- // Insert Listing 5.13 here
- */
+    UInt32 numBytes;
+    UInt32 nPackets = aqp->numPacketsToRead;
+    CheckError(AudioFileReadPackets(aqp->playbackFile,false,&numBytes,aqp->packetDescs, aqp->packetPosition,&nPackets, inCompleteAQBuffer->mAudioData),"AudioFileReadPackets failed");
+    if (nPackets > 0) {
+        inCompleteAQBuffer->mAudioDataByteSize = numBytes;
+        AudioQueueEnqueueBuffer(inAQ,inCompleteAQBuffer, (aqp->packetDescs ? nPackets : 0), aqp->packetDescs);
+        aqp->packetPosition += nPackets;
+    }else {
+        CheckError(AudioQueueStop(inAQ, false),
+                   "AudioQueueStop failed"); aqp->isDone = true;
+    }
+}
+
 #pragma mark main function
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
